@@ -31,11 +31,17 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-          <img alt="Hello Girl! logotyp" className={styles.logo} src="/logo/logo.svg"></img>
+        <img
+          alt="Hello Girl! logotyp"
+          className={styles.logo}
+          src="/logo/logo.svg"
+        ></img>
       </main>
 
       <footer className={styles.footer}>
-        {/* <a href="https://www.linkedin.com/groups/12518492/">LinkedIn</a> */}
+        <a href="https://www.linkyar next devdin.com/groups/12518492/">
+          Följd oss på LinkedIn för senaste nyheterna!
+        </a>
       </footer>
     </div>
   );
