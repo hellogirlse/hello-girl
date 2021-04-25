@@ -1,0 +1,66 @@
+@use "../../styles/settings.scss" as *;
+
+.hero {
+  padding-top: 0;
+  padding-bottom: 2rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  text-align: center;
+  margin: 0 auto;
+}
+.heroImg {
+  width: 100%;
+}
+
+.heroBlock h1 {
+  font-size: 32px;
+  text-align: left;
+  margin: 0;
+  position: relative;
+}
+
+.heroBlock h1:before {
+  content: "";
+  display: block;
+  width: 210px;
+  height: 50%;
+  background-color: $highlight;
+  position: absolute;
+  top: 1.8rem;
+  left: -1rem;
+  z-index: -1;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.heroBlock p {
+  text-align: left;
+  font-weight: 600;
+}
+
+.textBlock {
+  padding: 4rem;
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 900px) {
+  section.home-hero {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 4rem;
+    padding-left: 4rem;
+  }
+
+  .hero-block {
+    width: 50%;
+  }
+
+  .hero-block .text-block {
+    padding: 4rem;
+  }
+
+  .hero-img-block {
+    width: 50%;
+  }
+}

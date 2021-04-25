@@ -1,0 +1,74 @@
+@use "../../styles/settings.scss" as *;
+
+.card {
+  display: block;
+  flex-grow: 0;
+  width: 100%;
+  border: solid 2px $black;
+  box-shadow: -8px 8px 0px 0px $highlight;
+  // max-width: 400px;
+  margin-bottom: 2rem;
+}
+.card .innerCard {
+  text-align: center;
+  padding: 1rem 0 1.5rem;
+}
+
+// .card a:hover button.btn img {
+//   margin-left: 2rem;
+// }
+
+.card h2 {
+  margin-bottom: 0.8rem;
+}
+
+.cardDate {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.card p {
+  max-width: 100%;
+  margin-top: 0;
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  div.event-card {
+    flex-grow: 0;
+    width: calc(50% - 1rem);
+    border: 0.2rem solid var(--black);
+  }
+
+  div.events-row {
+    justify-content: space-around;
+  }
+}
+
+div.event-card a {
+  display: block;
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+  color: var(--black);
+  text-decoration: none;
+}
+
+@media (min-width: 900px) {
+  div.events-row {
+    justify-content: space-evenly;
+  }
+
+  section.home-events {
+    padding: 2rem 1rem;
+  }
+
+  section.home-events p.section-label {
+    margin-bottom: 4rem;
+  }
+
+  div.event-card a {
+    padding: 2rem;
+  }
+}
