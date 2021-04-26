@@ -1,7 +1,8 @@
 @use "settings" as *;
+@import "https://pro.fontawesome.com/releases/v5.10.0/css/all.css";
 
 .logo {
-  max-width: 600px;
+  max-width: 500px;
   min-width: 300px;
   width: 100%;
 }
@@ -18,15 +19,28 @@
 
 .main {
   color: $primary;
-  padding: 5rem 0;
+  padding: 4rem 4rem;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-size: 1.5rem;
+  color: #fff;
+  line-height: 1.5;
+  max-width: 900px;
 }
 .footer {
-  min-height: 30vh;
   font-size: 2rem;
+  padding: 4rem;
   background-color: $secundary;
+}
+
+.socialMedia {
+  a {
+    padding: 1rem;
+  }
+  a:hover {
+    color: $primary;
+  }
 }
