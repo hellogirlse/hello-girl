@@ -1,0 +1,60 @@
+@import '../../styles/config/mixins';
+@import '../../styles/config/variables';
+
+.event {
+    width: 100%;
+
+    &__container {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: stretch;
+        justify-content: space-between;
+
+        &__wrapper {
+            flex-grow: 1;
+            display: grid;
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+            gap: rem(64px);
+            max-width: rem(460px);
+            padding: rem(80px) 0;
+            margin: 0 auto;
+
+            @include tablet {
+                padding: rem(120px) 0;
+            }
+
+            @include desktop {
+                max-width: rem(960px);
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: flex-start;
+
+        @include tablet {
+            align-items: center;
+        }
+
+
+        @include desktop {
+            grid-column: span 2 / span 2;
+        }
+
+        h2 {
+            margin-bottom: rem(32px);
+            max-width: rem(640px);
+
+            @include tablet {
+                text-align: center;
+            }
+        }
+
+        p {
+            max-width: rem(640px);
+        }
+    }
+}

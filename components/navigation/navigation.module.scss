@@ -1,0 +1,92 @@
+@import '../../styles/config/mixins';
+@import '../../styles/config/variables';
+
+.header {
+    width: 100%;
+    padding: rem(32px) 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: padding .2s ease-in-out;
+
+    &.sticky {
+        padding: rem(8px) 0 rem(16px) 0;
+        box-shadow: 0 rem(4px) rem(46px) 0 rgba(color(black), .05);
+
+        @include tablet {
+            padding: rem(8px) 0;
+        }
+        
+        .header__nav__menu__item {
+            .logo {
+                height: rem(46px);
+
+                @include tablet {
+                    height: rem(64px);
+                }
+            }
+        }
+    }
+
+    &__nav {
+        margin: 0 auto;
+        max-width: rem(800px);
+
+        &__menu {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            list-style: none;
+            padding: 0;
+
+            @include tablet {
+                justify-content: center;
+            }
+
+            &__item {
+                padding: 0 rem(8px);
+                text-align: center;
+
+                @include tablet {
+                    flex: 1;
+                    padding: 0 rem(24px);
+                }
+
+                &:nth-child(3) {
+                    flex: initial;
+
+                    @media screen and (max-width: 767px) {
+                        width: 100%;
+                        order: -1;
+                        padding-bottom: rem(8px);
+
+                        @include tablet {
+                            padding-bottom: rem(24px);
+                        }
+                    }
+                }
+
+                a {
+                    display: inline-block;
+                    @include font-size(20px);
+                    text-transform: uppercase;
+                    font-weight: $bold;
+
+                    &.active {
+                        &:after {
+                            background-color: color(primary-light);
+                        }
+                    }
+                }
+
+                .logo {
+                    height: rem(160px);
+                    width: auto;
+                    transition: height .2s ease-in-out;
+                }
+            }
+        }
+    }
+}

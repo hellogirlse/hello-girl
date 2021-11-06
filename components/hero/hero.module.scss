@@ -1,0 +1,119 @@
+@import '../../styles/config/mixins';
+@import '../../styles/config/variables';
+
+.hero {
+    width: 100%;
+    margin-top: rem(32px);
+    margin-bottom: rem(80px);
+    position: relative;
+
+    &:before {
+        content: '';
+        display: inline-block;
+        width: 100%;
+        height: rem(230px);
+        background-color: color(primary);
+        position: absolute;
+        top: rem(48px);
+        left: 0;
+        z-index: -1;
+
+        @include tablet {
+            height: 50vh;
+        }
+
+        @include desktop {
+            width: 50%;
+            height: calc(100% - 96px);
+        }
+    }
+
+    &__container {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+
+        &__wrapper {
+            flex-grow: 1;
+            display: flex;
+            flex-flow: column wrap;
+            align-items: stretch;
+            justify-content: space-between;
+
+            @include desktop {
+                flex-flow: row nowrap;
+            }
+        }
+    }
+
+    &__decoration {
+        padding-top: rem(120px);
+        position: relative;
+
+        &:after {
+            content: '';
+            display: inline-block;
+            height: calc(100% - (50vh - 2rem));
+            border-left: rem(4px) solid color(black);
+            position: absolute;
+            bottom: rem(-80px);
+            left: 0;
+
+            @include desktop {
+                height: 8rem;
+                bottom: auto;
+                top: calc(100% - 3rem);
+            }
+        }
+
+        fieldset {
+            height: calc(100% + 5rem);
+            border-color: color(white);
+
+            legend {
+                background-color: color(primary);
+                color: color(white);
+            }
+        }
+    }
+
+    &__image {
+        flex: 1;
+        width: 100%;
+        position: relative;
+
+        &:before {
+            display: block;
+            content: "";
+            width: 100%;
+            padding-top: calc((1 / 1) * 100%);
+          }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    &__content {
+        flex: 1;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: flex-start;
+        justify-content: center;
+        padding-top: rem(32px);
+
+        @include desktop {
+            padding-top: 0;
+            padding-left: rem(56px);
+        }
+
+        p {
+            font-weight: $bold;
+        }
+    }
+}

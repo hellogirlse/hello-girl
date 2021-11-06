@@ -1,0 +1,92 @@
+@import '../../styles/config/mixins';
+@import '../../styles/config/variables';
+
+.footer {
+    padding-bottom: rem(80px);
+
+    &__container {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: stretch;
+        justify-content: space-between;
+
+        @include desktop {
+            flex-flow: row wrap;
+        }
+    }
+
+    &__logo {
+        flex: 1;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: flex-start;
+        padding: rem(80px) 0 rem(48px) 0;
+
+        @include desktop {
+            padding: rem(240px) 0 0 0;
+        }
+
+        img {
+            width: rem(120px);
+            height: auto;
+        }
+
+        p {
+            margin-bottom: 0;
+            
+            @include tablet {
+                padding-left: rem(24px);
+            }
+        }
+    }
+
+    &__social {
+        flex: 1;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: flex-end;
+        justify-content: space-between;
+        color: color(white);
+
+        @include tablet {
+            padding: 0 rem(16px) rem(48px) rem(16px);
+        }
+
+        a {
+            @include font-size(24px);
+            transition: color .2s ease-in-out;
+
+            svg {
+                width: auto;
+                height: rem(16px);
+
+                path {
+                    fill: color(white);
+                    transition: fill .2s ease-in-out;
+                }
+            }
+
+            i {
+                font-size: inherit;
+            }
+
+            &:hover, &:focus, &:active {
+                color: color(primary-light);
+
+                svg {
+                    path {
+                        fill: color(primary-light);
+                    }
+                }
+            }
+        }
+    }
+
+    &__decoration {
+        fieldset {
+            border-color: color(white);
+            height: rem(32px);
+        }
+    }
+}

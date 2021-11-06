@@ -1,0 +1,147 @@
+.headline {
+    line-height: 1.1;
+    max-width: rem(800px);
+
+    &--h1 {
+        @include font-size(46px);
+        position: relative;
+        margin-bottom: rem(32px);
+
+        &:after {
+            content: '';
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            background-color: color(primary-light);
+            position: absolute;
+            top: rem(16px);
+            right: rem(20px);
+            z-index: -1;
+        }
+    }
+    
+    &--h2 {
+        @include font-size(32px);
+
+        @include tablet {
+            @include font-size(42px);
+        }
+    }
+    
+    &--h3 {
+        @include font-size(38px);
+    }
+    
+    &--h4 {
+        @include font-size(32px);
+    }
+    
+    &--h5 {
+        @include font-size(24px);
+    }
+    
+    &--h6 {
+        @include font-size(20px);
+    }
+}
+
+p {
+    @include font-size(18px);
+    line-height: 1.75;
+    margin-bottom: rem(16px);
+    max-width: rem(800px);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    b, strong {
+        font-size: inherit;
+        font-weight: $bold;
+        line-height: inherit;
+    }
+
+    i, em {
+        font-size: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+        font-style: italic;
+    }
+
+    a {
+        font-size: inherit;
+        font-weight: inherit;
+    }
+}
+
+a {
+    display: inline-block;
+    @include font-size(18px);
+    font-weight: $regular;
+    line-height: 1;
+    color: inherit;
+    text-decoration: none;
+    position: relative;
+
+    &:after {
+        content: '';
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        position: absolute;
+        top: 0;
+        right: rem(8px);
+        transform: translateY(50%);
+        z-index: -1;
+        transition: background-color .2s ease-in-out;
+    }
+
+    &:hover, &:focus, &:active {
+        
+        &:after {
+            background-color: color(primary-light);
+        }
+    }
+}
+
+ul, ol {
+
+    li {
+        @include font-size(18px);
+        font-weight: $regular;
+        line-height: 1.5;
+
+        &::marker {
+            font-weight: $bold;
+        }
+    }
+}
+
+.page-decoration {
+    display: none;
+    padding-right: rem(56px);
+    position: relative;
+
+    @include tablet {
+        display: block;
+    }
+
+    fieldset {
+        height: 100%;
+        border: none;
+        border-left: rem(4px) solid color(black);
+
+        legend {
+            display: inline-block;
+            font-weight: $bold;
+            text-transform: uppercase;
+            @include font-size(24px);
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            transform: rotate(180deg) translateX(50%);
+            background-color: color(white);
+            padding: rem(32px) 0;
+        }
+    }
+}

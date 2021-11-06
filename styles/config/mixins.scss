@@ -1,0 +1,85 @@
+/*
+ * Rem calculator
+ * ex. padding-rigth: rem(24px);
+ */
+@function rem($size) {
+    $remSize: $size / 16px;
+    @return $remSize * 1rem;
+}
+ 
+/*
+ * Font size rem calculator and fallback
+ * ex. @include font-size(24px);
+ */ 
+@mixin font-size($size) {
+    font-size: $size;
+    font-size: rem($size);
+}
+
+ // Media queries
+// ex. @include large-desktop{}
+@mixin large-desktop {
+    @media only screen and (min-width: 1280px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media only screen and (min-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media only screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin phone {
+    @media only screen and (min-width: 375px) {
+        @content;
+    }
+}
+ 
+ /*
+  * IE Only
+  *  ex. @include ie-only { display: block; }
+  */
+ @mixin ie-only {
+     @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+         @content;
+     }
+ }
+ 
+ /*
+  * EDGE Only
+  *  ex. @include edge-only { display: block; }
+  */
+  @mixin edge-only {
+     @supports (-ms-ime-align: auto) {
+         @content;
+     }
+ }
+ 
+ /*
+  * SAFARI Only
+  *  ex. @include safari-only { display: block; }
+  */
+ @mixin safari-only {
+     @media not all and (min-resolution:.001dpcm) {
+         @supports (-webkit-appearance:none) {
+             @content;
+         }
+     }
+ }
+ 
+ /*
+  * FIREFOX Only
+  *  ex. @include firefox-only { display: block; }
+  */
+  @mixin firefox-only {
+     @-moz-document url-prefix() {
+         @content;
+     }
+ }
