@@ -1,0 +1,26 @@
+@import '../../styles/config/mixins';
+@import '../../styles/config/variables';
+
+.btn {
+    display: inline-block;
+    padding: rem(16px) rem(24px);
+    border: rem(3px) solid color(black);
+    font-weight: $bold;
+    text-align: center;
+    position: relative;
+
+    &:after {
+        background-color: color(primary-light);
+        transform: translateY(10px);
+        right: rem(10px);
+        transition: transform .2s ease-in-out, right .2s ease-in-out;
+    }
+
+    &:hover, &:focus, &:active {
+
+        &:after {
+            transform: translateY(0);
+            right: 0;
+        }
+    }
+}

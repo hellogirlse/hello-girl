@@ -1,0 +1,58 @@
+@import '../../styles/config/mixins';
+@import '../../styles/config/variables';
+
+.quote {
+
+    &__container {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: stretch;
+        justify-content: space-between;
+
+        &__wrapper {
+            flex-grow: 1;
+            display: flex;
+            flex-flow: column wrap;
+            align-items: flex-start;
+            margin: rem(120px) 0;
+
+            @include tablet {
+                align-items: center;
+            }
+
+            blockquote {
+                text-align: center;
+                max-width: rem(800px);
+                transform: translateY(16px) translateX(-16px);
+
+                p {
+                    @include font-size(32px);
+                    position: relative;
+
+                    @include tablet {
+                        @include font-size(42px);
+                    }
+                }
+            }
+        }
+    }
+
+    &__text {
+        display: inline-block;
+        font-size: inherit;
+        line-height: inherit;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translateY(-16px) translateX(16px);
+    }
+
+    &__decoration {
+        display: inline;
+        font-size: inherit;
+        line-height: inherit;
+        color: transparent;
+        background: color(primary-light);
+        box-shadow: 0 0 0 color(primary-light), rem(-12px) 0 0 color(primary-light);
+    }
+}

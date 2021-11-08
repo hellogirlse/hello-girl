@@ -1,0 +1,39 @@
+@import '../../styles/config/mixins';
+@import '../../styles/config/variables';
+
+.primary {
+
+    &__container {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: stretch;
+        justify-content: space-between;
+
+        &__wrapper {
+            flex-grow: 1;
+            display: flex;
+            flex-flow: column wrap;
+            align-items: flex-start;
+            margin: rem(120px) 0;
+
+            @include tablet {
+                align-items: center;
+            }
+
+            h2 {
+                margin-bottom: rem(32px);
+
+                @include tablet {
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    &__decoration {
+
+        fieldset {
+            border-color: color(white);
+        }
+    }
+}

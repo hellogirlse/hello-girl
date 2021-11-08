@@ -1,0 +1,31 @@
+/*-- COLORS --*/
+$colors: (
+    black:          #000000,
+    white:          #FFFFFF,
+    primary:        #0C484E,
+    primary-light:  #07FFC0,
+    secondary:      #FFA20D
+);
+
+@each $name, $color in $colors  {
+    .bg-#{$name} {
+        background-color: #{$color};
+    }
+
+    .text-#{$name} {
+        color: #{$color};
+    }
+}
+
+@function color($color-name) {
+    @return map-get($map: $colors, $key: $color-name);
+}
+
+@import url('https://use.typekit.net/qmg7zje.css');
+
+/*-- FONT WEIGHT --*/
+$regular:   400;
+$bold:      700;
+
+/*-- FONTS --*/
+$font: 'PT Mono', pt-mono, monospace;
