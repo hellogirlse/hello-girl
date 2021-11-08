@@ -26,19 +26,20 @@
         display: flex;
         flex-flow: column wrap;
         align-items: center;
-        justify-content: flex-start;
+        justify-content: center;
         padding: rem(46px);
         text-align: center;
         height: calc(100% - 38px);
 
         h2 {
-            margin-top: auto;
+            // margin-top: auto;
         }
 
         p {
             @include font-size(24px);
             font-weight: $bold;
-            margin: rem(8px) 0 rem(32px) 0;
+            margin-top: rem(8px);
+            // margin: rem(8px) 0 rem(32px) 0;
 
             @include tablet {
                 @include font-size(32px);

@@ -21,7 +21,7 @@ function EventCard(props: EventProps) {
                 { props.title ? (<h2 className="headline headline--h2">{props.title}</h2>) : null }
                 { props.date ? (<p>{props.date}</p>) : null }
 
-                { props.link ? (<Button label="Mer om kursen" link={props.link} />) : null }
+                {/* { props.link ? (<Button label="Mer om kursen" link={props.link} />) : null } */}
 
             </div>
         </div>

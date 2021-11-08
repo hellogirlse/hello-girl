@@ -47,7 +47,7 @@ function Navigation(props) {
                             className={activeSection == 'hem' ? style.active : ''}
                             onClick={(e) => {
                                 e.preventDefault();
-                                document.getElementById('hem').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                document.getElementById('__next').scrollIntoView({ behavior: 'smooth', block: 'start' });
                                 setActiveSection('hem');
                             }}
                             >

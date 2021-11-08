@@ -20,7 +20,7 @@ function EventSection(props) {
                         <p>
                             Är du nyfiken på att lära dig programmering?
                             <br/>Då är det här en utbildning för dig! 
-                            Under våra workshops går vi igenom grunderna i HTML, CSS och Javascript för att bygga en enkel och snygg webbsida.
+                            Under våra workshops går vi igenom grunderna i HTML, CSS och JavaScript för att bygga en enkel och snygg webbsida.
                         </p>
                     </div>
 
