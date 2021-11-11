@@ -24,8 +24,8 @@ function EventSection(props) {
                         </p>
                     </div>
 
-                    <EventCard title="Workshop Jönköping" date="4-5 februari 2022" link="#"/>
-                    <EventCard title="Workshop Stockholm" date="25-26 februari 2022" link="#"/>
+                    <EventCard title="Workshop Jönköping" date="25-26 februari 2022" link="#"/>
+                    <EventCard title="Workshop Stockholm" date="4-5 februari 2022" link="#"/>
                 </div>
 
             </div>
