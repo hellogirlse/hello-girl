@@ -17,15 +17,16 @@ function EventSection(props) {
 
                     <div className={style.event__content}>
                         <h2 className="headline headline--h2">Kurser & Event</h2>
-                        <p>
+                        <p>Vi har för tillfället inga planerade event, håll utkik i våra sociala medier för kommande kurser & event.</p>
+                        {/* <p>
                             Är du nyfiken på att lära dig programmering?
                             <br/>Då är det här en utbildning för dig! 
                             Under våra workshops går vi igenom grunderna i HTML, CSS och JavaScript för att bygga en enkel och snygg webbsida.
-                        </p>
+                        </p> */}
                     </div>
 
-                    <EventCard title="Workshop Jönköping" date="25-26 februari 2022" link="#"/>
-                    <EventCard title="Workshop Stockholm" date="4-5 februari 2022" link="#"/>
+                    {/* <EventCard title="Workshop Jönköping" date="25-26 februari 2022" link="#"/>
+                    <EventCard title="Workshop Stockholm" date="4-5 februari 2022" link="#"/> */}
                 </div>
 
             </div>
