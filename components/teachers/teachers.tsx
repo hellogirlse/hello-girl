@@ -30,7 +30,7 @@ function Teachers(props) {
                     <TeacherCard name="Sophie Kores" position="Front-end & Backend utvecklare" company="Spot On" image="./images/sophie.jpg"/>
                     <TeacherCard name="Matilda Ulming" position="Kommunikatör/Webbredaktör" company="Moderskeppet" image="./images/matilda.jpg"/>
                     <TeacherCard name="Emma Kihlberg" position="Analytics specialist" company="Precis Digital" image="./images/emma.jpg"/>
-                    <TeacherCard name="Annie Ekblom" position="Front-end utvecklare & designer" company="Knowit" image="./images/annie.jpg"/>
+                    <TeacherCard name="Annie Ekblom" position="Front-end utvecklare & designer" company="Consid" image="./images/annie.jpg"/>
                     <TeacherCard name="Loredana Isacsson" position="UI/UX & Digital designer" company="Pixels & Friends" image="./images/loredana.jpg"/>
                     <TeacherCard name="Ida Franzén Leibnitz" position="Account Executive" company="Salesforce" image="./images/profile-fallback.jpg"/>
                 </div>
