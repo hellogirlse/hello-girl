@@ -13,9 +13,11 @@ function Friends(props) {
                 <div className={style.friends__container__wrapper}>
                     <img src="./logos/science-park.png" alt="Bild: Science Park Jönköping"/>
                     <img src="./logos/jordbruksverket.png" alt="Bild: Jordbruksverket"/>
-                    <img src="./logos/sogeti.png" alt="Bild: Sogeti"/>
+                    <img className={style.friends__compress_height +` `+ style.friends__compress_height__small} src="./logos/sogeti.png" alt="Bild: Sogeti"/>
                     <img src="./logos/consid.svg" alt="Bild: Consid"/>
                     <img src="./logos/avantime.svg" alt="Bild: Avantime"/>
+                    <img className={style.friends__compress_height +` `+ style.friends__compress_height__large} src="./logos/toxic.png" alt="Bild: Toxic"/>
+                    <img src="./logos/pixelandfriends.png" alt="Bild: Pixel & Friends"/>
                 </div>
             </div>
         </section>

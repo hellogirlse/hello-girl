@@ -23,7 +23,7 @@ function Teachers(props) {
 
                     <TeacherCard name="Daniela Andersson Waara" position="Front-end utvecklare" company="Avantime" image="./images/daniela.jpg"/>
                     <TeacherCard name="Emmelie Strand" position="Front-end utvecklare & designer" company="Sogeti" image="./images/emmelie.jpg"/>
-                    <TeacherCard name="Linnea Karlsson" position="System- & Webbutvecklare" company="Consid" image="./images/linnea.jpg"/>
+                    <TeacherCard name="Linnea Karlsson" position="System- & Webbutvecklare" company="Toxic" image="./images/linnea.jpg"/>
                     <TeacherCard name="Martina Ronnysdotter" position="Systemutvecklare" company="Jordbruksverket" image="./images/martina.jpg"/>
                     <TeacherCard name="Isabelle Sandhall Kantola" position="UI/UX Designer" company="Consid" image="./images/isabelle.jpg"/>
                     <TeacherCard name="Gabriella Karlsson" position="Systemutvecklare" company="Jordbruksverket" image="./images/gabriella.jpg"/>
