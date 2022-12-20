@@ -8,18 +8,10 @@ function Navigation(props) {
   const [activeSection, setActiveSection] = useState("hem");
 
   useEffect(() => {
-    let cleanup = true;
+    const main = document.getElementsByTagName("main")[0];
+    const headerHeight = headerRef.current.clientHeight;
 
-    if (cleanup) {
-      const main = document.getElementsByTagName("main")[0];
-      const headerHeight = headerRef.current.clientHeight;
-
-      main.style.paddingTop = headerHeight + "px";
-    }
-
-    return () => {
-      cleanup = false;
-    };
+    main.style.paddingTop = headerHeight + "px";
   }, [headerRef]);
 
   useScrollPosition(
