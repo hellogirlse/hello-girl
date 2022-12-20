@@ -1,31 +1,39 @@
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	font-size: 1rem;
-	word-wrap: normal;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1rem;
+  word-wrap: normal;
 }
 
 body {
-	background-color: color(white);
-	font-family: $font;
-	font-weight: $bold;
-	color: color(black);
+  background-color: color(white);
+  font-family: $font;
+  font-weight: $bold;
+  color: color(black);
+}
+
+.main {
+  padding-top: rem(267px);
+
+  @include tablet {
+    padding-top: rem(232px);
+  }
 }
 
 .container {
-	width: 100%;
-	margin: 0 auto;
-    padding: 0 rem(24px);
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 rem(24px);
 
-    @include large-desktop {
-        padding: 0;
-        max-width: rem(1240px);
-    }
+  @include large-desktop {
+    padding: 0;
+    max-width: rem(1240px);
+  }
 }
 
 .bg-primary {
-	color: color(white);
+  color: color(white);
 }

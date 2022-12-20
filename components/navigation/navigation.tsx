@@ -7,16 +7,9 @@ function Navigation(props) {
   const [sticky, setSticky] = useState(false);
   const [activeSection, setActiveSection] = useState("hem");
 
-  useEffect(() => {
-    const main = document.getElementsByTagName("main")[0];
-    const headerHeight = headerRef.current.clientHeight;
-
-    main.style.paddingTop = headerHeight + "px";
-  }, [headerRef]);
-
   useScrollPosition(
     ({ prevPos, currPos }) => {
-      if (Math.abs(currPos.y) > headerRef.current.clientHeight / 3) {
+      if (Math.abs(currPos.y) > 32) {
         setSticky(true);
       } else {
         setSticky(false);
