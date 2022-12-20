@@ -1,77 +1,71 @@
-@import '../../styles/config/mixins';
-@import '../../styles/config/variables';
+@import "../../styles/config/mixins";
+@import "../../styles/config/variables";
 
 .friends {
+  &__container {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: stretch;
+    justify-content: space-between;
 
-    &__container {
-        display: flex;
-        flex-flow: row nowrap;
-        align-items: stretch;
-        justify-content: space-between;
+    &__wrapper {
+      flex-grow: 1;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: rem(32px);
+      align-items: center;
+      margin: rem(80px) 0;
 
-        &__wrapper {
-            flex-grow: 1;
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: rem(32px);
-            align-items: center;
-            margin: rem(80px) 0;
+      @include desktop {
+        grid-template-columns: repeat(7, minmax(0, 1fr));
+        margin: rem(120px) 0;
+      }
 
-            @include tablet {
-                gap: rem(48px);
-            }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
 
-            @include desktop {
-                grid-template-columns: repeat(7, minmax(0, 1fr));
-                margin: rem(120px) 0;
-            }
+  &__compress_height {
+    max-height: rem(64px);
 
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: contain;
-            }
-        }
+    &__small {
+      max-height: rem(32px);
+
+      @include tablet {
+        max-height: rem(46px);
+      }
     }
 
-    &__compress_height {
-        max-height: rem(64px);
-    
-        &__small {
-            max-height: rem(32px);
+    &__large {
+      max-height: rem(24px);
 
-            @include tablet {
-                max-height: rem(46px);
-            }
-        }
-    
-        &__large {
-            max-height: rem(24px);
+      @include tablet {
+        max-height: rem(36px);
+      }
+    }
+  }
 
-            @include tablet {
-                max-height: rem(36px);
-            }
-        }
+  &__decoration {
+    position: relative;
+
+    &:after {
+      content: "";
+      display: inline-block;
+      height: rem(32px);
+      border-left: rem(4px) solid color(black);
+      position: absolute;
+      top: 0;
+      left: 0;
     }
 
-    &__decoration {
-        position: relative;
-
-        &:after {
-            content: '';
-            display: inline-block;
-            height: rem(32px);
-            border-left: rem(4px) solid color(black);
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-
-        fieldset {
-
-            legend {
-                transform: rotate(180deg) translateX(50%) translateY(-2rem);
-            }
-        }
+    fieldset {
+      legend {
+        transform: rotate(180deg) translateX(50%) translateY(-2rem);
+      }
     }
+  }
 }
