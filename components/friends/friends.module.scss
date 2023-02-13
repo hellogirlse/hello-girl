@@ -11,13 +11,13 @@
     &__wrapper {
       flex-grow: 1;
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: rem(32px);
       align-items: center;
       margin: rem(80px) 0;
 
       @include desktop {
-        grid-template-columns: repeat(7, minmax(0, 1fr));
+        grid-template-columns: repeat(8, minmax(0, 1fr));
         margin: rem(120px) 0;
       }
 
@@ -30,21 +30,21 @@
   }
 
   &__compress_height {
-    max-height: rem(64px);
+    max-height: rem(32px);
 
     &__small {
-      max-height: rem(32px);
+      max-height: rem(20px);
 
       @include tablet {
-        max-height: rem(46px);
+        max-height: rem(32px);
       }
     }
 
     &__large {
-      max-height: rem(24px);
+      max-height: rem(16px);
 
       @include tablet {
-        max-height: rem(36px);
+        max-height: rem(20px);
       }
     }
   }

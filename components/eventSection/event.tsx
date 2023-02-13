@@ -27,8 +27,8 @@ function EventSection(props) {
 
           <EventCard
             title="Workshop Jönköping"
-            date="Håll ögonen öppna våren 2023!"
-            link={null}
+            date="24-25 mars"
+            link="https://hellogirlmars.confetti.events/"
           />
         </div>
       </div>
