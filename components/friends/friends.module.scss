@@ -10,21 +10,32 @@
 
     &__wrapper {
       flex-grow: 1;
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: rem(32px);
+      display: flex;
+      flex-flow: row wrap;
       align-items: center;
+      justify-content: flex-start;
+      gap: rem(32px);
       margin: rem(80px) 0;
 
       @include desktop {
-        grid-template-columns: repeat(8, minmax(0, 1fr));
         margin: rem(120px) 0;
+        gap: rem(32px) rem(64px);
       }
 
       img {
-        width: 100%;
-        height: 100%;
+        flex: 1;
+        width: auto;
+        max-width: calc(33.33% - 1rem);
         object-fit: contain;
+        object-position: center;
+
+        @include tablet {
+          max-width: calc(20% - 2rem);
+        }
+
+        @include desktop {
+          max-width: calc(14% - 2rem);
+        }
       }
     }
   }
@@ -32,19 +43,15 @@
   &__compress_height {
     max-height: rem(32px);
 
-    &__small {
+    @include tablet {
+      max-height: rem(48px);
+    }
+
+    &__extra {
       max-height: rem(20px);
 
       @include tablet {
         max-height: rem(32px);
-      }
-    }
-
-    &__large {
-      max-height: rem(16px);
-
-      @include tablet {
-        max-height: rem(20px);
       }
     }
   }
