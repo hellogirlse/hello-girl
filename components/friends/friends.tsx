@@ -17,11 +17,7 @@ function Friends(props) {
           />
           <img src="./logos/jordbruksverket.png" alt="Bild: Jordbruksverket" />
           <img
-            className={
-              style.friends__compress_height +
-              ` ` +
-              style.friends__compress_height__small
-            }
+            className={style.friends__compress_height}
             src="./logos/sogeti.png"
             alt="Bild: Sogeti"
           />
@@ -31,7 +27,7 @@ function Friends(props) {
             className={
               style.friends__compress_height +
               ` ` +
-              style.friends__compress_height__large
+              style.friends__compress_height__extra
             }
             src="./logos/toxic.png"
             alt="Bild: Toxic"
@@ -41,10 +37,15 @@ function Friends(props) {
             className={
               style.friends__compress_height +
               ` ` +
-              style.friends__compress_height__large
+              style.friends__compress_height__extra
             }
             src="./logos/knowit.svg"
             alt="Bild: Knowit"
+          />
+          <img
+            className={style.friends__compress_height}
+            src="./logos/confetti.png"
+            alt="Bild: Confetti"
           />
         </div>
       </div>
