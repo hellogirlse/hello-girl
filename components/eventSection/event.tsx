@@ -28,6 +28,7 @@ function EventSection(props) {
           <EventCard
             title='Workshop'
             date='Håll utkik i våra sociala medier!'
+            link={null}
           />
         </div>
       </div>
