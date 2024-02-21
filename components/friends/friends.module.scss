@@ -1,78 +1,78 @@
-@import "../../styles/config/mixins";
-@import "../../styles/config/variables";
+@import '../../styles/config/mixins';
+@import '../../styles/config/variables';
 
 .friends {
-  &__container {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: stretch;
-    justify-content: space-between;
+    &__container {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: stretch;
+        justify-content: space-between;
 
-    &__wrapper {
-      flex-grow: 1;
-      display: flex;
-      flex-flow: row wrap;
-      align-items: center;
-      justify-content: flex-start;
-      gap: rem(32px);
-      margin: rem(80px) 0;
+        &__wrapper {
+            flex-grow: 1;
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: rem(32px);
+            margin: rem(80px) 0;
 
-      @include desktop {
-        margin: rem(120px) 0;
-        gap: rem(32px) rem(64px);
-      }
+            @include desktop {
+                margin: rem(120px) 0;
+                gap: rem(32px) rem(64px);
+            }
 
-      img {
-        flex: 1;
-        width: auto;
-        max-width: calc(33.33% - 1rem);
-        object-fit: contain;
-        object-position: center;
+            img {
+                flex: 1;
+                width: auto;
+                max-width: calc(20% - 1rem);
+                object-fit: contain;
+                object-position: center;
+
+                @include tablet {
+                    max-width: calc(25% - 2rem);
+                }
+
+                @include desktop {
+                    max-width: calc(11% - 2rem);
+                }
+            }
+        }
+    }
+
+    &__compress_height {
+        max-height: rem(32px);
 
         @include tablet {
-          max-width: calc(20% - 2rem);
+            max-height: rem(48px);
         }
 
-        @include desktop {
-          max-width: calc(14% - 2rem);
+        &__extra {
+            max-height: rem(20px);
+
+            @include tablet {
+                max-height: rem(32px);
+            }
         }
-      }
-    }
-  }
-
-  &__compress_height {
-    max-height: rem(32px);
-
-    @include tablet {
-      max-height: rem(48px);
     }
 
-    &__extra {
-      max-height: rem(20px);
+    &__decoration {
+        position: relative;
 
-      @include tablet {
-        max-height: rem(32px);
-      }
+        &:after {
+            content: '';
+            display: inline-block;
+            height: rem(32px);
+            border-left: rem(4px) solid color(black);
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        fieldset {
+            legend {
+                transform: rotate(180deg) translateX(50%) translateY(-2rem);
+            }
+        }
     }
-  }
-
-  &__decoration {
-    position: relative;
-
-    &:after {
-      content: "";
-      display: inline-block;
-      height: rem(32px);
-      border-left: rem(4px) solid color(black);
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-
-    fieldset {
-      legend {
-        transform: rotate(180deg) translateX(50%) translateY(-2rem);
-      }
-    }
-  }
 }

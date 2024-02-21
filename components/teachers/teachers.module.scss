@@ -12,7 +12,7 @@
 
         &__decoration {
             position: relative;
-    
+
             &:after {
                 content: '';
                 display: inline-block;
@@ -22,9 +22,8 @@
                 top: 0;
                 left: 0;
             }
-    
+
             fieldset {
-    
                 legend {
                     transform: rotate(180deg) translateX(50%) translateY(-2rem);
                 }
@@ -81,14 +80,15 @@
             right: 0;
             transform: translateY(-16px) translateX(16px);
         }
-    
+
         &__decoration {
             display: inline;
             font-size: inherit;
             line-height: inherit;
             color: transparent;
             background: color(primary-light);
-            box-shadow: 0 0 0 color(primary-light), rem(-12px) 0 0 color(primary-light);
+            box-shadow: 0 0 0 color(primary-light),
+                rem(-12px) 0 0 color(primary-light);
         }
     }
 }
