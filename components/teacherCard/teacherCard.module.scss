@@ -27,7 +27,7 @@
 
         &:before {
             display: block;
-            content: "";
+            content: '';
             width: 100%;
             padding-top: calc((1 / 1) * 100%);
         }
@@ -44,7 +44,6 @@
 }
 
 .teacher {
-
     h3 {
         @include font-size(20px);
         margin-top: rem(16px);

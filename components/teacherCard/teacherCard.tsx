@@ -22,9 +22,15 @@ function TeacherCard(props: TeacherProps) {
                 </div>
             </div>
 
-            { props.name ? (<h3 className="headline headline--h3">{props.name}</h3>) : null }
-            { props.position ? (<p className={style.teacher__position}>{props.position}</p>) : null }
-            { props.company ? (<p className={style.teacher__company}>{props.company}</p>) : null }
+            {props.name ? (
+                <h3 className="headline headline--h3">{props.name}</h3>
+            ) : null}
+            {props.position ? (
+                <p className={style.teacher__position}>{props.position}</p>
+            ) : null}
+            {props.company ? (
+                <p className={style.teacher__company}>{props.company}</p>
+            ) : null}
         </div>
     );
 }
