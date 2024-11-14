@@ -5,6 +5,7 @@ interface EventProps {
     title: string;
     date: string;
     link: string;
+    label: string;
 }
 
 function EventCard(props: EventProps) {
@@ -17,12 +18,17 @@ function EventCard(props: EventProps) {
             </div>
 
             <div className={style.card__body}>
+                {props.title ? (
+                    <h2 className="headline headline--h2">{props.title}</h2>
+                ) : null}
+                {props.date ? <p>{props.date}</p> : null}
 
-                { props.title ? (<h2 className="headline headline--h2">{props.title}</h2>) : null }
-                { props.date ? (<p>{props.date}</p>) : null }
-
-                { props.link ? (<Button label="Mer om kursen" link={props.link} />) : null }
-
+                {props.link ? (
+                    <Button
+                        label={props.label ?? 'Mer om kursen'}
+                        link={props.link}
+                    />
+                ) : null}
             </div>
         </div>
     );
