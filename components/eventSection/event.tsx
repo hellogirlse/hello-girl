@@ -29,17 +29,10 @@ function EventSection(props) {
                     </div>
 
                     <EventCard
-                        title="Inspirations-event i Jönköping"
-                        date="27 november 2024"
-                        link="https://l.messenger.com/l.php?u=https%3A%2F%2Finspirationskvall-med-hello-girl.confetti.events%2F&h=AT2sTchyJzzXE5fkk7WiY3YO7P93849d8AXCbj_TggsmqRBh3X6TaT765rxRvU56hua_NBa6G_xTMGiLwtHAkvxPred-3emniyZabDnvRhyGA6YBYtbyfj3sze_T3wCHzPahnS7V"
-                        label="Mer om eventet"
-                    />
-
-                    <EventCard
                         title="Kurs i Jönköping"
-                        date="Våren 2025"
-                        link={null}
-                        label={null}
+                        date="4-5 april"
+                        link="https://hello-girl-workshop-2025.confetti.events/"
+                        label="Mer om kursen"
                     />
                 </div>
             </div>
